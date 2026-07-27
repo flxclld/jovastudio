@@ -1,29 +1,28 @@
 # Jova Studio
 
-Website for Jova Studio, built as a Next/Vinext project ready for Cloudflare hosting.
+Cloudflare Worker for `jovastudio.co`.
 
-## Local development
+This Worker serves the authorized Framer-published Jova Studio site from `https://jovastudio.framer.website/` and removes the visible Framer badge at the edge before returning HTML to visitors. This keeps the original structure, typography, responsive layout, logo SVGs, project pages, scripts, and assets intact while using the custom domain.
+
+## Cloudflare settings
+
+Use this repository with a Cloudflare Workers project.
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- Root directory: `/`
+- Node version: 22+
+
+## Local commands
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+Production domain:
 
-```bash
-npm run build
+```text
+https://jovastudio.co
+https://www.jovastudio.co
 ```
-
-## Cloudflare Pages
-
-Use these settings when connecting the GitHub repository:
-
-- Framework preset: None / custom
-- Build command: `npm run build`
-- Output directory: `dist`
-- Node version: 22 or newer
-
-The current production preview created during setup is:
-
-https://jovastudio.flxclld.chatgpt.site
